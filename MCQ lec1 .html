@@ -1,0 +1,830 @@
+<MCQ lec1 html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Operating System
+ Quiz</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f7f9;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        .quiz-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 20px 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        .question-block {
+            margin-bottom: 25px;
+            padding: 15px;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+            border: 1px solid #e0e0e0;
+        }
+        .question-text {
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #34495e;
+        }
+        .options-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        .options-list li {
+            margin-bottom: 8px;
+        }
+        label {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+        }
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+        .submit-btn {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #fff;
+            background-color: #3498db;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 30px;
+        }
+        .submit-btn:hover {
+            background-color: #2980b9;
+        }
+        #results {
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        /* Feedback Styles */
+        .correct {
+            background-color: #e8f5e9; /* Light Green */
+            border-left: 5px solid #4caf50; /* Green */
+        }
+        .incorrect {
+            background-color: #ffebee; /* Light Red */
+            border-left: 5px solid #f44336; /* Red */
+        }
+        .correct-answer-text {
+            color: #2e7d32;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="quiz-container">
+    <h1> Operating System
+ Quiz</h1>
+    <div id="results"></div>
+
+    <form id="quiz-form">
+        
+        <h2>Test 1:  Operating System
+</h2>
+
+        <!-- Question 1 -->
+        <div class="question-block" data-correct="B">
+            <p class="question-text">1. Which of the following best describes how an operating system acts as a resource allocator?:</p>
+            <ul class="options-list">
+                <li><label><input type="radio" name="q1" value="A"> A) It provides programming interfaces for application development</label></li>
+                <li><label><input type="radio" name="q1" value="B"> B)  It assigns hardware resources to competing processes to ensure efficient and fair use</label></li>
+                <li><label><input type="radio" name="q1" value="C"> C) It allocates files in the disk alphabetically</label></li>
+                <li><label><input type="radio" name="q1" value="D"> D) It encrypts resources to protect them from users</label></li>
+            </ul>
+        </div>
+        <!-- Question 2 -->
+        <div class="question-block" data-correct="B">
+            <p class="question-text">2.From the user’s point of view, the OS should primarily:</p>
+            <ul class="options-list">
+                <li><label><input type="radio" name="q2" value="A"> A)Manage interrupts and CPU scheduling efficiently</label></li>
+                <li><label><input type="radio" name="q2" value="B"> B)Provide convenience, performance, and ease of use</label></li>
+                <li><label><input type="radio" name="q2" value="C"> C) Control file systems and device drivers</label></li>
+                <li><label><input type="radio" name="q2" value="D"> D)  Handle synchronization between processes</label></li>
+            </ul>
+        </div>
+        <!-- Question 3 -->
+        <div class="question-block" data-correct="C">
+            <p class="question-text">3.From the system’s point of view, the OS is mainly responsible for:</p>
+            <ul class="options-list">
+                <li><label><input type="radio" name="q3" value="A"> A)  User interface design</label></li>
+                <li><label><input type="radio" name="q3" value="B"> B) Security authentication</label></li>
+                <li><label><input type="radio" name="q3" value="C"> C)Managing and allocating hardware resources</label></li>
+                <li><label><input type="radio" name="q3" value="D"> D)Program compilation</label></li>
+            </ul>
+        </div>
+        <!-- Question 4 -->
+        <div class="question-block" data-correct="A">
+            <p class="question-text">4. Why is the kernel considered the “core” of the operating system?</p>
+            <ul class="options-list">
+                <li><label><input type="radio" name="q4" value="A"> A) It runs continuously and provides basic system services</label></li>
+                <li><label><input type="radio" name="q4" value="B"> B) It is stored on secondary memory</label></li>
+                <li><label><input type="radio" name="q4" value="C"> C)It executes only user programs</label></li>
+                <li><label><input type="radio" name="q4" value="D"> D) It is the first program executed by the CPU after booting</label></li>
+            </ul>
+        </div>
+        <!-- Question 5 -->
+        <div class="question-block" data-correct="C">
+            <p class="question-text">5.During system startup, which sequence is correct?</p>
+            <ul class="options-list">
+                <li><label><input type="radio" name="q5" value="A"> A)  Kernel → Bootstrap → BIOS → OS loaded</label></li>
+                <li><label><input type="radio" name="q5" value="B"> B) Bootstrap → BIOS → Kernel → User processes</label></li>
+                <li><label><input type="radio" name="q5" value="C"> C) Bootstrap program loads kernel → Kernel starts execution</label></li>
+                <li><label><input type="radio" name="q5" value="D"> D) User process loads kernel into memory</label></li>
+            </ul>
+        </div>
+        <!-- Question 6 -->
+        <div class="question-block" data-correct="C">
+            <p class="question-text">6.The bootstrap program is typically stored in:</p>
+            <ul class="options-list">
+                <li><label><input type="radio" name="q6" value="A"> A)Main memory (RAM)</label></li>
+                <li><label><input type="radio" name="q6" value="B"> B)  Hard disk</label></li>
+                <li><label><input type="radio" name="q6" value="C"> C) ROM or EPROM</label></li>
+                <li><label><input type="radio" name="q6" value="D"> D) Cache memory</label></li>
+            </ul>
+        </div>
+        <!-- Question 7 -->
+        <div class="question-block" data-correct="B">
+            <p class="question-text">7. When a running program causes a division by zero, the event is handled as:</p>
+            <ul class="options-list">
+                <li><label><input type="radio" name="q7" value="A"> A) Hardware interrupt</label></li>
+                <li><label><input type="radio" name="q7" value="B"> B)  Trap or exception</label></li>
+                <li><label><input type="radio" name="q7" value="C"> C) System call</label></li>
+                <li><label><input type="radio" name="q7" value="D"> D)  Signal from BIOS</label></li>
+            </ul>
+        </div>
+        <!-- Question 8 -->
+        <div class="question-block" data-correct="C">
+            <p class="question-text">8.What happens immediately after a hardware interrupt occurs?
+            <ul class="options-list">
+                <li><label><input type="radio" name="q8" value="A"> A) The system restarts automatically</label></li>
+                <li><label><input type="radio" name="q8" value="B"> B) The CPU stops all processes permanently</label></li>
+                <li><label><input type="radio" name="q8" value="C"> C) Control is transferred to the interrupt service routine</label></li>
+                <li><label><input type="radio" name="q8" value="D"> D) The CPU switches to user mode</label></li>
+            </ul>
+        </div>
+        <!-- Question 9 -->
+        <div class="question-block" data-correct="B">
+            <p class="question-text">9. Which of the following is true about main memory?</p>
+            <ul class="options-list">
+                <li><label><input type="radio" name="q9" value="A"> A) It is non-volatile and slower than secondary storage</label></li>
+                <li><label><input type="radio" name="q9" value="B"> B) It is volatile and directly accessible by the CPU</label></li>
+                <li><label><input type="radio" name="q9" value="C"> C) It is non-volatile and used for backups</label></li>
+                <li><label><input type="radio" name="q9" value="D"> D) It cannot store instructions</label></li>
+            </ul>
+        </div>
+        <!-- Question 10 -->
+        <div class="question-block" data-correct="A">
+            <p class="question-text">10. The storage hierarchy is primarily organized based on::</p>
+            <ul class="options-list">
+                <li><label><input type="radio" name="q10" value="A"> A) Access speed, cost, and volatility</label></li>
+                <li><label><input type="radio" name="q10" value="B"> B)  Manufacturer and capacity</label></li>
+                <li><label><input type="radio" name="q10" value="C"> C) Operating system type</label></li>
+                <li><label><input type="radio" name="q10" value="D"> D)  File system format</label></li>
+            </ul>
+        </div>
+        <!-- Question 11 -->
+        <div class="question-block" data-correct="C">
+            <p class="question-text">11. Which of the following storage devices is non-volatile and faster than hard disks?</p>
+            <ul class="options-list">
+                <li><label><input type="radio" name="q11" value="A"> A)  RAM</label></li>
+                <li><label><input type="radio" name="q11" value="B"> B) Cache memory</label></li>
+                <li><label><input type="radio" name="q11" value="C"> C) Solid-state disk (SSD)</label></li>
+                <li><label><input type="radio" name="q11" value="D"> D) Optical drive</label></li>
+            </ul>
+        </div>
+        <!-- Question 12 -->
+        <div class="question-block" data-correct="B">
+            <p class="question-text">12. In a 64-bit computer, a word typically consists of:</p>
+            <ul class="options-list">
+                <li><label><input type="radio" name="q12" value="A"> A) 4 bytes</label></li>
+                <li><label><input type="radio" name="q12" value="B"> B)  8 bytes</label></li>
+                <li><label><input type="radio" name="q12" value="C"> C) 64 bytes</label></li>
+                <li><label><input type="radio" name="q12" value="D"> D)  16 bits</label></li>
+            </ul>
+        </div>
+        <!-- Question 13 -->
+        <div class="question-block" data-correct="B">
+            <p class="question-text">13.A multiprocessor system improves performance mainly by:</p>
+            <ul class="options-list">
+                <li><label><input type="radio" name="q13" value="A"> A) Reducing CPU utilization</label></li>
+                <li><label><input type="radio" name="q13" value="B"> B)  Increasing parallel execution through multiple CPUs</label></li>
+                <li><label><input type="radio" name="q13" value="C"> C)  Restricting simultaneous program execution</label></li>
+                <li><label><input type="radio" name="q13" value="D"> D)  Limiting memory access</label></li>
+            </ul>
+        </div>
+        <!-- Question 14 -->
+        <div class="question-block" data-correct=" D">
+            <p class="question-text">14. Which of the following is NOT an advantage of multiprocessor systems?</p>
+            <ul class="options-list">
+                <li><label><input type="radio" name="q14" value="A"> A) Increased throughput</label></li>
+                <li><label><input type="radio" name="q14" value="B"> B) Economy of scale</label></li>
+                <li><label><input type="radio" name="q14" value="C"> C)  Fault tolerance</label></li>
+                <li><label><input type="radio" name="q14" value="D"> D)  Simplified OS design</label></li>
+            </ul>
+        </div>
+        <!-- Question 15 -->
+        <div class="question-block" data-correct="B">
+            <p class="question-text">15. In asymmetric multiprocessing,</p>
+            <ul class="options-list">
+                <li><label><input type="radio" name="q15" value="A"> A)  Each processor performs all system tasks</label></li>
+                <li><label><input type="radio" name="q15" value="B"> B) Each processor is assigned a specific task or function</label></li>
+                <li><label><input type="radio" name="q15" value="C"> C)  All processors share a single memory bus equally</label></li>
+                <li><label><input type="radio" name="q15" value="D"> D) The processors execute in alternating cycles</label></li>
+            </ul>
+        </div>
+        <!-- Question 16 -->
+        <div class="question-block" data-correct="B">
+            <p class="question-text">16. In symmetric multiprocessing (SMP),</p>
+            <ul class="options-list">
+                <li><label><input type="radio" name="q16" value="A"> A) One master CPU controls all others</label></li>
+                <li><label><input type="radio" name="q16" value="B"> B)  Every processor executes both user and kernel tasks</label></li>
+                <li><label><input type="radio" name="q16" value="C"> C) Only one CPU can access memory</label></li>
+                <li><label><input type="radio" name="q16" value="D"> D)  Each CPU requires a unique OS instance</label></li>
+            </ul>
+        </div>
+        <!-- Question 17 -->
+        <div class="question-block" data-correct=" B">
+            <p class="question-text">17. The main goal of multiprogramming is to:</p>
+            <ul class="options-list">
+                <li><label><input type="radio" name="q17" value="A"> A)Execute only one job at a time</label></li>
+                <li><label><input type="radio" name="q17" value="B"> B) Increase CPU utilization by keeping it busy</label></li>
+                <li><label><input type="radio" name="q17" value="C"> C) Allow direct access to I/O devices</label></li>
+                <li><label><input type="radio" name="q17" value="D"> D) Reduce system load by disabling processes</label></li>
+            </ul>
+        </div>
+        <!-- Question 18 -->
+        <div class="question-block" data-correct="B">
+            <p class="question-text">18.In a timesharing system, multiple users can interact with the computer because:</p>
+            <ul class="options-list">
+                <li><label><input type="radio" name="q18" value="A"> A) Each user owns a separate CPU</label></li>
+                <li><label><input type="radio" name="q18" value="B"> B)  The CPU switches among processes rapidly</label></li>
+                <li><label><input type="radio" name="q18" value="C"> C) Memory is partitioned by user</label></li>
+                <li><label><input type="radio" name="q18" value="D"> D)  Interrupts are disabled during execution</label></li>
+            </ul>
+        </div>
+        <!-- Question 19 -->
+        <div class="question-block" data-correct=" A ">
+            <p class="question-text">19. Virtual memory allows:</p>
+            <ul class="options-list">
+                <li><label><input type="radio" name="q19" value="A"> A) The OS to execute processes not fully in main memory</label></li>
+                <li><label><input type="radio" name="q19" value="B"> B) Users to directly manage hardware</label></li>
+                <li><label><input type="radio" name="q19" value="C"> C) A system to run without secondary storage</label></li>
+                <li><label><input type="radio" name="q19" value="D"> D) Processes to overwrite each other’s data</label></li>
+            </ul>
+        </div>
+        <!-- Question 20 -->
+        <div class="question-block" data-correct="B">
+            <p class="question-text">20. CPU scheduling in multiprogramming systems ensures:</p>
+            <ul class="options-list">
+                <li><label><input type="radio" name="q20" value="A"> A) The CPU is always idle between processes</label></li>
+                <li><label><input type="radio" name="q20" value="B"> B) Fair and efficient allocation of CPU time among ready processes</label></li>
+                <li><label><input type="radio" name="q20" value="C"> C) Only I/O-bound processes run</label></li>
+                <li><label><input type="radio" name="q20" value="D"> D) Processes run in strict alphabetical order</label></li>
+            </ul>
+        </div>
+        
+       
+        <!-- Question 21 -->
+        <div class="question-block" data-correct="B">
+            <p class="question-text">21. it in a dual-mode system is used to:</p>
+            <ul class="options-list">
+                <li><label><input type="radio" name="q21" value="A"> A) Identify the current process owner</label></li>
+                <li><label><input type="radio" name="q21" value="B"> B) Distinguish between user mode (1) and kernel mode (0)</label></li>
+                <li><label><input type="radio" name="q21" value="C"> C) Indicate interrupt priority</label></li>
+                <li><label><input type="radio" name="q21" value="D"> D) Mark processes for termination</label></li>
+            </ul>
+        </div>
+        <!-- Question 22 -->
+        <div class="question-block" data-correct="B">
+            <p class="question-text">22. Privileged instructions can be executed only in::</p>
+            <ul class="options-list">
+                <li><label><input type="radio" name="q22" value="A"> A) User mode</label></li>
+                <li><label><input type="radio" name="q22" value="B"> B)  Kernel mode</label></li>
+                <li><label><input type="radio" name="q22" value="C"> C) Debug mode</label></li>
+                <li><label><input type="radio" name="q22" value="D"> D) Protected user mode</label></li>
+            </ul>
+        </div>
+        <!-- Question 23 -->
+        <div class="question-block" data-correct="B">
+            <p class="question-text">23. Protection mechanisms in an OS are designed to::</p>
+            <ul class="options-list">
+                <li><label><input type="radio" name="q23" value="A"> A)Prevent physical damage to the system</label></li>
+                <li><label><input type="radio" name="q23" value="B"> B) Control access of users and processes to resources</label></li>
+                <li><label><input type="radio" name="q23" value="C"> C) Limit network traffic</label></li>
+                <li><label><input type="radio" name="q23" value="D"> D) Encrypt all system data</label></li>
+            </ul>
+        </div>
+        <!-- Question 24 -->
+        <div class="question-block" data-correct="B">
+            <p class="question-text">24. Security mechanisms in an OS defend against:</p>
+            <ul class="options-list">
+                <li><label><input type="radio" name="q24" value="A"> A) Interrupt requests</label></li>
+                <li><label><input type="radio" name="q24" value="B"> B)  Internal and external attacks such as viruses and worms</label></li>
+                <li><label><input type="radio" name="q24" value="C"> C)Compiler errors</label></li>
+                <li><label><input type="radio" name="q24" value="D"> D)  Paging faults</label></li>
+            </ul>
+        </div>
+        <!-- Question 25 -->
+        <div class="question-block" data-correct="A">
+            <p class="question-text">25. Distributed computing systems are characterized by:</p>
+            <ul class="options-list">
+                <li><label><input type="radio" name="q25" value="A"> A)  Multiple independent computers connected via a network</label></li>
+                <li><label><input type="radio" name="q25" value="B"> B) One CPU executing multiple threads</label></li>
+                <li><label><input type="radio" name="q25" value="C"> C) A single process distributed across multiple cores</label></li>
+                <li><label><input type="radio" name="q25" value="D"> D) A centralized memory shared by all devices</label></li>
+            </ul>
+        </div>
+        <!-- Question 26 -->
+        <div class="question-block" data-correct="B">
+            <p class="question-text">26. In a client-server model, the server:</p>
+            <ul class="options-list">
+                <li><label><input type="radio" name="q26" value="A"> A)Requests services from clients</label></li>
+                <li><label><input type="radio" name="q26" value="B"> B)  Provides resources or services to clients</label></li>
+                <li><label><input type="radio" name="q26" value="C"> C)Controls network traffic routing</label></li>
+                <li><label><input type="radio" name="q26" value="D"> D) Only handles hardware interrupts</label></li>
+            </ul>
+        </div>
+        <!-- Question 27 -->
+        <div class="question-block" data-correct="A">
+            <p class="question-text">27. Virtualization allows:</p>
+            <ul class="options-list">
+                <li><label><input type="radio" name="q27" value="A"> A) Multiple OS instances to run on the same physical hardware</label></li>
+                <li><label><input type="radio" name="q27" value="B"> B) Processes to run without memory management</label></li>
+                <li><label><input type="radio" name="q27" value="C"> C)Hardware to operate without an OS</label></li>
+                <li><label><input type="radio" name="q27" value="D"> D) Systems to prevent multitasking</label></li>
+            </ul>
+        </div>
+        <!-- Question 28 -->
+        <div class="question-block" data-correct="B">
+            <p class="question-text">28.The Virtual Machine Manager (VMM) provides:</p>
+            <ul class="options-list">
+                <li><label><input type="radio" name="q28" value="A"> A) Hardware-level interrupt handling</label></li>
+                <li><label><input type="radio" name="q28" value="B"> B) Services for creating and managing virtual machines</label></li>
+                <li><label><input type="radio" name="q28" value="C"> C) CPU instruction pipelining</label></li>
+                <li><label><input type="radio" name="q28" value="D"> D) User authentication services</label></li>
+            </ul>
+        </div>
+        <!-- Question 29 -->
+        <div class="question-block" data-correct="B">
+            <p class="question-text">29.Cloud computing differs from virtualization because it:</p>
+            <ul class="options-list">
+                <li><label><input type="radio" name="q29" value="A"> A)  Runs applications locally</label></li>
+                <li><label><input type="radio" name="q29" value="B"> B) Delivers computing and storage as services over a network</label></li>
+                <li><label><input type="radio" name="q29" value="C"> C) Uses only physical servers</label></li>
+                <li><label><input type="radio" name="q29" value="D"> D) Cannot scale dynamically</label></li>
+            </ul>
+        </div>
+        <!-- Question 30 -->
+        <div class="question-block" data-correct="B">
+            <p class="question-text">30. Infrastructure as a Service (IaaS) provides:</p>
+            <ul class="options-list">
+                <li><label><input type="radio" name="q30" value="A"> A) Application software via the Internet</label></li>
+                <li><label><input type="radio" name="q30" value="B"> B) Virtualized hardware resources like servers and storage</label></li>
+                <li><label><input type="radio" name="q30" value="C"> C) Operating system source code</label></li>
+                <li><label><input type="radio" name="q30" value="D"> D) Programming APIs for development</label></li>
+            </ul>
+        </div>
+        <!-- Question 31 -->
+        <div class="question-block" data-correct="B">
+            <p class="question-text">31. The primary purpose of an operating system is to:</p>
+            <ul class="options-list">
+                <li><label><input type="radio" name="q31" value="A"> A) Translate high-level code into machine code</label></li>
+                <li><label><input type="radio" name="q31" value="B"> B)  Control and coordinate hardware usage among users and applications</label></li>
+                <li><label><input type="radio" name="q31" value="C"> C)  Provide only file management</label></li>
+                <li><label><input type="radio" name="q31" value="D"> D)Perform hardware repair functions</label></li>
+            </ul>
+        </div>
+        <!-- Question 32 -->
+        <div class="question-block" data-correct="B">
+            <p class="question-text">32.Which of the following best describes the relationship between system programs and application programs?</p>
+            <ul class="options-list">
+                <li><label><input type="radio" name="q32" value="A"> A)System programs manage hardware, while application programs manage the kernel</label></li>
+                <li><label><input type="radio" name="q32" value="B"> B) System programs provide a runtime environment for application programs</label></li>
+                <li><label><input type="radio" name="q32" value="C"> C)  Application programs manage system resources directly</label></li>
+                <li><label><input type="radio" name="q32" value="D"> D) They are both parts of the kernel</label></li>
+            </ul>
+        </div>
+        <!-- Question 33 -->
+        <div class="question-block" data-correct="B">
+            <p class="question-text">33. The main difference between an operating system and firmware is that:</p>
+            <ul class="options-list">
+                <li><label><input type="radio" name="q33" value="A"> A) Firmware is volatile, OS is not</label></li>
+                <li><label><input type="radio" name="q33" value="B"> B) Firmware is software permanently stored in ROM; OS is loaded into memory at startup</label></li>
+                <li><label><input type="radio" name="q33" value="C"> C) Firmware executes user programs</label></li>
+                <li><label><input type="radio" name="q33" value="D"> D) OS is part of the hardware</label></li>
+            </ul>
+        </div>
+        <!-- Question 34 -->
+        <div class="question-block" data-correct="B">
+            <p class="question-text">34. An interrupt is best described as:</p>
+            <ul class="options-list">
+                <li><label><input type="radio" name="q34" value="A"> A)A request by software to start the operating system</label></li>
+                <li><label><input type="radio" name="q34" value="B"> B)  A hardware or software signal causing the CPU to suspend its current task</label></li>
+                <li><label><input type="radio" name="q34" value="C"> C)A kernel routine for scheduling processes</label></li>
+                <li><label><input type="radio" name="q34" value="D"> D) A failure in memory management</label></li>
+            </ul>
+        </div>
+        <!-- Question 35 -->
+        <div class="question-block" data-correct="B">
+            <p class="question-text">35.What differentiates a hardware interrupt from a trap?</p>
+            <ul class="options-list">
+                <li><label><input type="radio" name="q35" value="A"> A) Hardware interrupts are generated by CPU instructions</label></li>
+                <li><label><input type="radio" name="q35" value="B"> B) Hardware interrupts originate from devices; traps are generated by software</label></li>
+                <li><label><input type="radio" name="q35" value="C"> C) Traps can occur only during I/O operations</label></li>
+                <li><label><input type="radio" name="q35" value="D"> D) Both are generated by user requests</label></li>
+            </ul>
+        </div>
+        <!-- Question 36 -->
+        <div class="question-block" data-correct="C">
+            <p class="question-text">36. When an interrupt occurs, what must the OS always do first?</p>
+            <ul class="options-list">
+                <li><label><input type="radio" name="q36" value="A"> A) Execute the user process again</label></li>
+                <li><label><input type="radio" name="q36" value="B"> B) Disable all devices</label></li>
+                <li><label><input type="radio" name="q36" value="C"> C)Save the state of the currently running process</label></li>
+                <li><label><input type="radio" name="q36" value="D"> D)  Restart the bootstrap program</label></li>
+            </ul>
+        </div>
+        <!-- Question 37 -->
+        <div class="question-block" data-correct="B">
+            <p class="question-text">37. A system call is typically used for:</p>
+            <ul class="options-list">
+                <li><label><input type="radio" name="q37" value="A"> A)Sending data over the network</label></li>
+                <li><label><input type="radio" name="q37" value="B"> B)Allowing user programs to request services from the kernel</label></li>
+                <li><label><input type="radio" name="q37" value="C"> C) Restarting the CPU</label></li>
+                <li><label><input type="radio" name="q37" value="D"> D) Modifying BIOS code</label></li>
+            </ul>
+        </div>
+        <!-- Question 38 -->
+        <div class="question-block" data-correct="B">
+            <p class="question-text">38. Which unit represents the native data size of a computer architecture?</p>
+            <ul class="options-list">
+                <li><label><input type="radio" name="q38" value="A"> A)  Byte</label></li>
+                <li><label><input type="radio" name="q38" value="B"> B)  Word</label></li>
+                <li><label><input type="radio" name="q38" value="C"> C) Bit</label></li>
+                <li><label><input type="radio" name="q38" value="D"> D) Nibble</label></li>
+            </ul>
+        </div>
+        <!-- Question 39 -->
+        <div class="question-block" data-correct="A">
+            <p class="question-text">39. A system with 32-bit addressing can address up to:</p>
+            <ul class="options-list">
+                <li><label><input type="radio" name="q39" value="A"> A)  2³² bytes</label></li>
+                <li><label><input type="radio" name="q39" value="B"> B)  32² bytes</label></li>
+                <li><label><input type="radio" name="q39" value="C"> C) 2¹⁶ bytes</label></li>
+                <li><label><input type="radio" name="q39" value="D"> D)64 KB</label></li>
+            </ul>
+        </div>
+        <!-- Question 40 -->
+        <div class="question-block" data-correct="A">
+            <p class="question-text">40. A hierarchical storage system improves performance because:</p>
+            <ul class="options-list">
+                <li><label><input type="radio" name="q40" value="A"> A) Faster, smaller storage is used as a cache for slower, larger storage</label></li>
+                <li><label><input type="radio" name="q40" value="B"> B) All storage devices operate at the same speed</label></li>
+                <li><label><input type="radio" name="q40" value="C"> C) It duplicates all data across layers</label></li>
+                <li><label><input type="radio" name="q40" value="D"> D) It eliminates volatility in memory</label></li>
+            </ul>
+        </div>
+
+      
+        
+        <!-- Question 41 -->
+        <div class="question-block" data-correct="B">
+            <p class="question-text">41 Which of the following systems would most likely use symmetric multiprocessing (SMP)?</p>
+            <ul class="options-list">
+                <li><label><input type="radio" name="q41" value="A"> A) Single-user desktop with one CPU</label></li>
+                <li><label><input type="radio" name="q41" value="B"> B) High-performance server where all CPUs share memory</label></li>
+                <li><label><input type="radio" name="q41" value="C"> C) A network of independent computers</label></li>
+                <li><label><input type="radio" name="q41" value="D"> D) A real-time embedded controller</label></li>
+            </ul>
+        </div>
+        <!-- Question 42 -->
+        <div class="question-block" data-correct="A">
+            <p class="question-text">42. In asymmetric multiprocessing, one processor is typically responsible for:</p>
+            <ul class="options-list">
+                <li><label><input type="radio" name="q42" value="A"> A) Handling interrupts and scheduling</label></li>
+                <li><label><input type="radio" name="q42" value="B"> B)  Managing all I/O operations exclusively</label></li>
+                <li><label><input type="radio" name="q42" value="C"> C) Randomly choosing jobs for other processors</label></li>
+                <li><label><input type="radio" name="q42" value="D"> D) Synchronizing caches</label></li>
+            </ul>
+        </div>
+        <!-- Question 43 -->
+        <div class="question-block" data-correct="B">
+            <p class="question-text">43.The economy of scale in multiprocessor systems means:</p>
+            <ul class="options-list">
+                <li><label><input type="radio" name="q43" value="A"> A) It costs less to produce identical CPUs</label></li>
+                <li><label><input type="radio" name="q43" value="B"> B)  Shared resources among processors reduce overall cost per computation</label></li>
+                <li><label><input type="radio" name="q43" value="C"> C) More processors automatically increase costs</label></li>
+                <li><label><input type="radio" name="q43" value="D"> D)  Each processor requires its own power supply</label></li>
+            </ul>
+        </div>
+        <!-- Question 44 -->
+        <div class="question-block" data-correct="A">
+            <p class="question-text">44.Graceful degradation refers to:</p>
+            <ul class="options-list">
+                <li><label><input type="radio" name="q44" value="A"> A) The ability of a system to maintain limited functionality even after a failure</label></li>
+                <li><label><input type="radio" name="q44" value="B"> B) A gradual decrease in system speed under heavy load</label></li>
+                <li><label><input type="radio" name="q44" value="C"> C) A backup performed by the OS</label></li>
+                <li><label><input type="radio" name="q44" value="D"> D) Slow disk access during booting</label></li>
+            </ul>
+        </div>
+        <!-- Question 45 -->
+        <div class="question-block" data-correct="B">
+            <p class="question-text">45. Which condition must hold true for multiprogramming to be effective?:</p>
+            <ul class="options-list">
+                <li><label><input type="radio" name="q45" value="A"> A) All jobs must complete at the same time</label></li>
+                <li><label><input type="radio" name="q45" value="B"> B) The CPU and I/O devices must work concurrently</label></li>
+                <li><label><input type="radio" name="q45" value="C"> C) Only one job can access memory</label></li>
+                <li><label><input type="radio" name="q45" value="D"> D)  The OS must disable interrupts</label></li>
+            </ul>
+        </div>
+        <!-- Question 46 -->
+        <div class="question-block" data-correct="A">
+            <p class="question-text">46. Job scheduling determines:</p>
+            <ul class="options-list">
+                <li><label><input type="radio" name="q46" value="A"> A) Which process is allowed to use the CPU next</label></li>
+                <li><label><input type="radio" name="q46" value="B"> B) Which program a user can run </label></li>
+                <li><label><input type="radio" name="q46" value="C"> C) When the system will shut down</label></li>
+                <li><label><input type="radio" name="q46" value="D"> D) Which device driver to load</label></li>
+            </ul>
+        </div>
+        <!-- Question 47 -->
+        <div class="question-block" data-correct="B">
+            <p class="question-text">47. In a time-sharing system, the main objective is to:</p>
+            <ul class="options-list">
+                <li><label><input type="radio" name="q47" value="A"> A) Minimize memory usage</label></li>
+                <li><label><input type="radio" name="q47" value="B"> B) Provide fast response to each user</label></li>
+                <li><label><input type="radio" name="q47" value="C"> C) Maximize throughput only</label></li>
+                <li><label><input type="radio" name="q47" value="D"> D)  Limit user access to kernel</label></li>
+            </ul>
+        </div>
+        <!-- Question 48 -->
+        <div class="question-block" data-correct="C">
+            <p class="question-text">48. When several processes are in memory and ready to run, the OS must decide:</p>
+            <ul class="options-list">
+                <li><label><input type="radio" name="q48" value="A"> A) Which process to terminate</label></li>
+                <li><label><input type="radio" name="q48" value="B"> B)Which process to load from disk</label></li>
+                <li><label><input type="radio" name="q48" value="C"> C)  Which process to execute next — this is known as CPU scheduling</label></li>
+                <li><label><input type="radio" name="q48" value="D"> D) How much memory to allocate for BIOS</label></li>
+            </ul>
+        </div>
+        <!-- Question 49 -->
+        <div class="question-block" data-correct="A">
+            <p class="question-text">49. Swapping refers to:</p>
+            <ul class="options-list">
+                <li><label><input type="radio" name="q49" value="A"> A) Moving processes between main memory and disk to free up space</label></li>
+                <li><label><input type="radio" name="q49" value="B"> B) Reordering CPU registers</label></li>
+                <li><label><input type="radio" name="q49" value="C"> C)  Exchanging user and kernel code</label></li>
+                <li><label><input type="radio" name="q49" value="D"> D) Copying interrupts into cache</label></li>
+            </ul>
+        </div>
+        <!-- Question 50 -->
+        <div class="question-block" data-correct="A">
+            <p class="question-text">50. In virtual memory, which of the following is possible?</p>
+            <ul class="options-list">
+                <li><label><input type="radio" name="q50" value="A"> A) Executing programs larger than physical memory</label></li>
+                <li><label><input type="radio" name="q50" value="B"> B) Running only one process at a time</label></li>
+                <li><label><input type="radio" name="q50" value="C"> C) Horizontal communication</label></li>
+                <li><label><input type="radio" name="q50" value="D"> D) Using cache memory as disk space</label></li>
+            </ul>
+        </div>
+        <!-- Question 51 -->
+        <div class="question-block" data-correct="A">
+            <p class="question-text">51. Why is dual-mode operation essential?</p>
+            <ul class="options-list">
+                <li><label><input type="radio" name="q51" value="A"> A) It allows the OS to differentiate between user and kernel privileges, preventing accidental damage</label></li>
+                <li><label><input type="radio" name="q51" value="B"> B) It improves execution speed</label></li>
+                <li><label><input type="radio" name="q51" value="C"> C) It allows processes to share I/O devices</label></li>
+                <li><label><input type="radio" name="q51" value="D"> D)  It reduces memory fragmentation</label></li>
+            </ul>
+        </div>
+        <!-- Question 52 -->
+        <div class="question-block" data-correct="B">
+            <p class="question-text">52. Which of the following instructions should be privileged?</p>
+            <ul class="options-list">
+                <li><label><input type="radio" name="q52" value="A"> A)  Add two integers</label></li>
+                <li><label><input type="radio" name="q52" value="B"> B) Read clock or change memory map</label></li>
+                <li><label><input type="radio" name="q52" value="C"> C)  Print to the screen</label></li>
+                <li><label><input type="radio" name="q52" value="D"> D) Execute arithmetic logic</label></li>
+            </ul>
+        </div>
+        <!-- Question 53 -->
+        <div class="question-block" data-correct="B">
+            <p class="question-text">53.A system call transitions the CPU from:</p>
+            <ul class="options-list">
+                <li><label><input type="radio" name="q53" value="A"> A) Kernel mode → User mode </label></li>
+                <li><label><input type="radio" name="q53" value="B"> B) User mode → Kernel mode </label></li>
+                <li><label><input type="radio" name="q53" value="C"> C) Supervisor mode → Real mode </label></li>
+                <li><label><input type="radio" name="q53" value="D"> D) Virtual mode → Protected mode</label></li>
+            </ul>
+        </div>
+        <!-- Question 54 -->
+        <div class="question-block" data-correct="B">
+            <p class="question-text">54. Returning from a system call or interrupt switches the CPU back to</p>
+            <ul class="options-list">
+                <li><label><input type="radio" name="q54" value="A"> A)  Kernel mode </label></li>
+                <li><label><input type="radio" name="q54" value="B"> B) User mode </label></li>
+                <li><label><input type="radio" name="q54" value="C"> C) LHypervisor mode</label></li>
+                <li><label><input type="radio" name="q54" value="D"> D) Supervisor mode</label></li>
+            </ul>
+        </div>
+        <!-- Question 55 -->
+        <div class="question-block" data-correct="B">
+            <p class="question-text">55.Which of the following best describes protection in OS terms?</p>
+            <ul class="options-list">
+                <li><label><input type="radio" name="q55" value="A"> A) Preventing users from installing new software</label></li>
+                <li><label><input type="radio" name="q55" value="B"> B) Mechanisms that control access of processes or users to system resources</label></li>
+                <li><label><input type="radio" name="q55" value="C"> C) Encrypting network data </label></li>
+                <li><label><input type="radio" name="q55" value="D"> D) Disabling file sharing</label></li>
+            </ul>
+        </div>
+        <!-- Question 56 -->
+        <div class="question-block" data-correct="A">
+            <p class="question-text">56. A denial-of-service (DoS) attack is primarily related to:</p>
+            <ul class="options-list">
+                <li><label><input type="radio" name="q56" value="A"> A)  Security</label></li>
+                <li><label><input type="radio" name="q56" value="B"> B) Protection</label></li>
+                <li><label><input type="radio" name="q56" value="C"> C) Scheduling</label></li>
+                <li><label><input type="radio" name="q56" value="D"> D) Virtual memory</label></li>
+            </ul>
+        </div>
+        <!-- Question 57 -->
+        <div class="question-block" data-correct="B">
+            <p class="question-text">57.Distributed systems differ from multiprocessor systems because:</p>
+            <ul class="options-list">
+                <li><label><input type="radio" name="q57" value="A"> A) They share a clock and memoryt</label></li>
+                <li><label><input type="radio" name="q57" value="B"> B) They consist of separate systems communicating over a network</label></li>
+                <li><label><input type="radio" name="q57" value="C"> C) They cannot communicate between nodes</label></li>
+                <li><label><input type="radio" name="q57" value="D"> D)  They use a single OS instance for all machines</label></li>
+            </ul>
+        </div>
+        <!-- Question 58 -->
+        <div class="question-block" data-correct="B">
+            <p class="question-text">58. A network operating system (NOS) provides:</p>
+            <ul class="options-list">
+                <li><label><input type="radio" name="q58" value="A"> A) Centralized control over all connected systems</label></li>
+                <li><label><input type="radio" name="q58" value="B"> B) Services like file sharing and resource access across a network</label></li>
+                <li><label><input type="radio" name="q58" value="C"> C) Support for single-user mode only</label></li>
+                <li><label><input type="radio" name="q58" value="D"> D) Cloud-only access</label></li>
+            </ul>
+        </div>
+        <!-- Question 59 -->
+        <div class="question-block" data-correct="A">
+            <p class="question-text">59. In peer-to-peer computing,</p>
+            <ul class="options-list">
+                <li><label><input type="radio" name="q59" value="A"> A) All nodes have equal privileges and can act as both client and server</label></li>
+                <li><label><input type="radio" name="q59" value="B"> B) One main node controls all communication</label></li>
+                <li><label><input type="radio" name="q59" value="C"> C)  Nodes cannot share data</label></li>
+                <li><label><input type="radio" name="q59" value="D"> D) The system uses symmetric multiprocessing
+</label></li>
+            </ul>
+        </div>
+        <!-- Question 60 -->
+        <div class="question-block" data-correct="B">
+            <p class="question-text">60.A hybrid cloud combines:</p>
+            <ul class="options-list">
+                <li><label><input type="radio" name="q60" value="A"> A)  Hardware and software</label></li>
+                <li><label><input type="radio" name="q60" value="B"> B)  Private and public cloud infrastructures</label></li>
+                <li><label><input type="radio" name="q60" value="C"> C)  Local and virtualized disks</label></li>
+                <li><label><input type="radio" name="q60" value="D"> D) Physical and logical memory</label></li>
+            </ul>
+        </div>
+
+       
+
+        <!-- Question 61 -->
+        <div class="question-block" data-correct="A">
+            <p class="question-text">61. In SaaS (Software as a Service), the user primarily interacts with:</p>
+            <ul class="options-list">
+                <li><label><input type="radio" name="q61" value="A"> A) Cloud-hosted applications</label></li>
+                <li><label><input type="radio" name="q61" value="B"> B)  Virtual machine managers</label></li>
+                <li><label><input type="radio" name="q61" value="C"> C) Storage devices directly</label></li>
+                <li><label><input type="radio" name="q61" value="D"> D) Operating system source code</label></li>
+            </ul>
+        </div>
+        <!-- Question 62 -->
+        <div class="question-block" data-correct="A">
+            <p class="question-text">62. PaaS (Platform as a Service) offers::</p>
+            <ul class="options-list">
+                <li><label><input type="radio" name="q62" value="A"> A)  A software development environment delivered via the cloud</label></li>
+                <li><label><input type="radio" name="q62" value="B"> B)  File storage only</label></li>
+                <li><label><input type="radio" name="q62" value="C"> C) Physical infrastructure</label></li>
+                <li><label><input type="radio" name="q62" value="D"> D)OS licensing services</label></li>
+            </ul>
+        </div>
+        <!-- Question 63 -->
+        <div class="question-block" data-correct="A">
+            <p class="question-text">63.IaaS (Infrastructure as a Service) provides:</p>
+            <ul class="options-list">
+                <li><label><input type="radio" name="q63" value="A"> A) Compilers and runtime environments</label></li>
+                <li><label><input type="radio" name="q63" value="B"> B) Virtualized computing resources like servers and storage</label></li>
+                <li><label><input type="radio" name="q63" value="C"> C) Web-based applications</label></li>
+                <li><label><input type="radio" name="q63" value="D"> D) Development platforms</label></li>
+            </ul>
+        </div>
+        <!-- Question 64 -->
+        <div class="question-block" data-correct="A">
+            <p class="question-text">64. Virtualization improves system flexibility because:</p>
+            <ul class="options-list">
+                <li><label><input type="radio" name="q64" value="A"> A) Multiple OS instances can run on a single hardware platform</label></li>
+                <li><label><input type="radio" name="q64" value="B"> B) It removes the need for an OS entirely</label></li>
+                <li><label><input type="radio" name="q64" value="C"> C) It enforces single-user mode</label></li>
+                <li><label><input type="radio" name="q64" value="D"> D)  It prevents multitasking</label></li>
+            </ul>
+        </div>
+        <!-- Question 65 -->
+        <div class="question-block" data-correct="A">
+            <p class="question-text">65. The VMM (Virtual Machine Manager) sits between:</p>
+            <ul class="options-list">
+                <li><label><input type="radio" name="q65" value="A"> A)  The CPU and cache </label></li>
+                <li><label><input type="radio" name="q65" value="B"> B) Hardware and guest operating systems</label></li>
+                <li><label><input type="radio" name="q65" value="C"> C) Application programs and libraries</label></li>
+                <li><label><input type="radio" name="q65" value="D"> D)  Firmware and kernel</label></li>
+            </ul>
+        </div>
+
+        <button type="button" class="submit-btn" id="submit-btn">Check Answers</button>
+    </form>
+</div>
+
+
+       
+<script>
+document.getElementById('submit-btn').addEventListener('click', function() {
+    const questionBlocks = document.querySelectorAll('.question-block');
+    let score = 0;
+    
+    questionBlocks.forEach(block => {
+        // Clear previous results
+        block.classList.remove('correct', 'incorrect');
+        const existingFeedback = block.querySelector('.correct-answer-text');
+        if (existingFeedback) {
+            existingFeedback.remove();
+        }
+
+        const correctAnswer = block.dataset.correct;
+        const selectedOption = block.querySelector('input[type="radio"]:checked');
+
+        if (selectedOption) {
+            if (selectedOption.value === correctAnswer) {
+                score++;
+                block.classList.add('correct');
+            } else {
+                block.classList.add('incorrect');
+                const feedback = document.createElement('p');
+                feedback.className = 'correct-answer-text';
+                feedback.textContent = `Correct Answer: ${correctAnswer}`;
+                block.appendChild(feedback);
+            }
+        } else {
+            // Mark unanswered questions as incorrect
+            block.classList.add('incorrect');
+            const feedback = document.createElement('p');
+            feedback.className = 'correct-answer-text';
+            feedback.textContent = `Correct Answer: ${correctAnswer}`;
+            block.appendChild(feedback);
+        }
+    });
+
+    const resultsDiv = document.getElementById('results');
+    resultsDiv.innerHTML = `Your Score: ${score} out of ${questionBlocks.length}`;
+    if(score === questionBlocks.length) {
+        resultsDiv.style.backgroundColor = '#e8f5e9';
+        resultsDiv.style.color = '#4caf50';
+    } else {
+        resultsDiv.style.backgroundColor = '#ffebee';
+        resultsDiv.style.color = '#f44336';
+    }
+
+    // Scroll to the top to see the score
+    window.scrollTo(0, 0);
+});
+</script>
+
+</body>
+</html>
